@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<h1>Lotería</h1>
+
+<script>
+
+  function saltoLinea() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(Phrase) {
+    document.write(Phrase);
+    saltoLinea();
+  }
+
+  function sorteo(n) {
+    numeroPensado = Math.round(Math.random() * n);
+    imprimir("El número ganador es: " + numeroPensado);
+  }
+
+  var n = prompt("Escribe un número máximo");
+  var numeroUsuario = prompt("Escribe un número");
+  sorteo(n);
+
+  if (numeroUsuario == numeroPensado) {
+    imprimir("El número es correcto");
+  } else if (numeroUsuario > numeroPensado) {
+    imprimir("El número del Usuario es mayor");
+  } else if (numeroUsuario < numeroPensado) {
+    imprimir("El numero del Usuario es menor");
+  }
+
+</script>

@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+  var pizarra = document.querySelector("canvas");
+  var pincel = pizarra.getContext("2d");
+
+  pincel.fillStyle = "lightgray";
+  pincel.fillRect(0, 0, 600, 400);
+
+  function dibujarCirculo(x, y, color) {
+
+    pincel.fillStyle = color;
+    pincel.beginPath();
+    pincel.arc(x, y, 100, 0, 2 * 3.1415);
+    pincel.fill();
+
+  }
+
+
+  dibujarCirculo(300, 100, "red");
+  dibujarCirculo(400, 200, "red");
+  dibujarCirculo(200, 200, "red");
+  dibujarCirculo(300, 300, "red");
+  dibujarCirculo(300, 200, "yellow");
+
+</script>

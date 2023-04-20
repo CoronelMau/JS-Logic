@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h1>Cuadrado con Canvas</h1>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+  function dibujarCuadrado(x, y, color) {
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = color;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.strokeStyle = "Black";
+    pincel.strokeRect(x, y, 50, 50);
+  }
+
+  for (var i = 0; i < 400; i = i + 50) {
+    for (var j = 0; j < 600; j = j + 50) {
+      dibujarCuadrado(j, i, "red");
+    }
+  }
+
+</script>

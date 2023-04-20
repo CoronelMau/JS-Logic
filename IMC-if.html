@@ -1,0 +1,35 @@
+<meta charser="UTF-8">
+
+<h1>IMC con Condicionantes</h1>
+
+<script>
+
+  function saltoLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function imprimir(Phrase) {
+    document.write(Phrase);
+    saltoLinea();
+  }
+
+  var nombre = prompt("Escribe tu nombre:")
+  var peso = prompt(nombre + ", escribre tu peso:");
+  var altura = prompt(nombre + ", escribe tu altura: ");
+  var imc = peso / (altura * altura);
+
+  if (imc < 18.5) {
+    imprimir(nombre + ", tienes insuficiencia ponderada, con: " + Math.round(imc) + " de IMC");
+  } else if (imc > 18.5 && imc < 25) {
+    imprimir(nombre + ", tienes un IMC normal, con: " + Math.round(imc) + " de IMC");
+  } else if (imc >= 25) {
+    imprimir(nombre + ", tienes sobrepeso, con: " + Math.round(imc) + " de IMC");
+  } else if (imc > 25 && imc < 30) {
+    imprimir(nombre + ", tienes preobesidad, con: " + Math.round(imc) + " de IMC")
+  } else if (imc >= 30) {
+    imprimir(nombre + ", tines obesidad, con: " + Math.round(imc) + " de IMC");
+  }
+
+</script>

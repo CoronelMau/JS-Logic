@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<h1>Edades: </h1>
+
+<script>
+
+  var year = 2022;
+  var nextLine = "<br><br>";
+
+  document.write("Mau tiene:" + (year - 2000) + " años");
+  document.write(nextLine);
+  document.write("Astrid tiene: " + (year - 2000) + " años");
+  document.write(nextLine);
+  document.write("Isaac tiene: " + (year - 1998) + " años");
+  document.write(nextLine);
+
+  document.write("<h2>Se pueden modificar las variables: </h2>");
+
+  year = 2030;
+  document.write("Mau tiene:" + (year - 2000) + " años");
+  document.write(nextLine);
+  document.write("Astrid tiene: " + (year - 2000) + " años");
+  document.write(nextLine);
+  document.write("Isaac tiene: " + (year - 1998) + " años");
+  document.write(nextLine);
+
+  document.write("<h2>Variables con resultado: </h2>");
+
+  var mau = 22;
+  var astrid = 22;
+  var isaac = 24;
+
+  var name1 = "Mau";
+  var name2 = "Astrid";
+  var name3 = "Isaac";
+
+  average = (mau + astrid + isaac) / 3;
+
+  document.write("El promedio de las edades de " + name1 + ", " + name2 + " e " + name3 + " es: " + Math.round(average));
+
+</script>
